@@ -1,15 +1,15 @@
-def num():
-    print(8, end='')
-    print(8, end='')
-    print(0, end='')
-    print(0, end='')
-    print(5, end='')
-    print(5, end='')
-    print(5, end='')
-    print(3, end='')
-    print(5, end='')
-    print(3, end='')
-    print(5, end='')
+def numbers(num):
+    print(num, end='')
 
 
-num()
+numbers(8)
+numbers(8)
+numbers(0)
+numbers(0)
+numbers(5)
+numbers(5)
+numbers(5)
+numbers(3)
+numbers(5)
+numbers(3)
+numbers(5)
