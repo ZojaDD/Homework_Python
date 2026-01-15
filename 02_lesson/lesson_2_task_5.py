@@ -1,6 +1,7 @@
 month = int(input("Введите номер месяца: "))
 
-def month_to_season (month):
+
+def month_to_season(month):
     if 1 <= month <= 2 or month == 12:
         return "Зима"
     elif 3 <= month <= 5:
@@ -12,4 +13,5 @@ def month_to_season (month):
     else:
         return "Неверный номер месяца"
 
-print (month_to_season (month))
+
+print(month_to_season(month))
