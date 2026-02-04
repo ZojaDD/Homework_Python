@@ -2,7 +2,7 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome()
+driver = webdriver.Firefox()
 
 # Перейти на страницу
 driver.get("http://the-internet.herokuapp.com/inputs")
@@ -16,7 +16,7 @@ driver.execute_script("arguments[0].setAttribute('type', 'text');",
 
 input_field.send_keys("Sky")
 
-sleep(5)
+sleep(2)
 
 # очистить поле
 input_field.clear()
@@ -24,7 +24,7 @@ input_field.clear()
 # Ввести в поле текст Pro
 input_field.send_keys("Pro")
 
-sleep(5)
+sleep(2)
 
 # Закрыть браузер
 driver.quit()
