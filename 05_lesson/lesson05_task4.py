@@ -2,9 +2,7 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-
-
-#Открыть браузер FireFox.
+# Открыть браузер FireFox.
 driver = webdriver.Firefox()
 
 # Перейти на страницу
@@ -32,11 +30,3 @@ print(text)
 
 # Закрыть браузер (метод quit()
 driver.quit()
-
-
-
-
-# Возвращает отображаемый текст указанного элемента
-# text = driver.find_element(By.TAG_NAME, "h1").text
-
-# print(text)
