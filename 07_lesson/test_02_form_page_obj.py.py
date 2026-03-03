@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from pages.FormPage import FormPage
 
 red_color = "rgba(248, 215, 218, 1)"
 green_color = "rgba(15, 81, 50, 1)"
@@ -79,9 +80,11 @@ def check_fields_success(driver):
 
 
 def test_form_submission_flow(driver):
-    open(driver)
-    fill_form(driver)
-    submit_form(driver)
-    check_zip_code_error(driver)
-    check_fields_success(driver)
+    form_page = FormPage(driver)
+    form_page.open()
+    form_page.fill_form()
+    form_page.submit_form()
+    form_page.check_zip_code_error()
+    form_page.check_fields_success()
+
     print("Все проверки цвета пройдены успешно!")
