@@ -1,9 +1,6 @@
 import pytest
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.service import Service
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from pages.FormPage import FormPage
 
 
@@ -12,10 +9,11 @@ def driver():
     edgeService = Service(
         r"C:\Users\MI\OneDrive\Desktop\first_repo\msedgedriver.exe")
     driver = webdriver.Edge(service=edgeService)
-    driver.set_page_load_timeout(10)  # Ожидание загрузки страницы
-    driver.maximize_window()  # Максимизируем окно браузера
+    driver.set_page_load_timeout(10)
+    driver.maximize_window()
     yield driver
-    driver.quit()  # Закрыть браузер после завершения тестов
+    driver.quit()
+
 
 def test_form_submission_flow(driver):
     form_page = FormPage(driver)
