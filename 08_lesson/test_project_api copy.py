@@ -24,4 +24,3 @@ response = requests.get(url, params=params)
 
 # Проверить ответ
 print(response.status_code)
-print(response.json())
